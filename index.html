@@ -2,3 +2,20 @@
 layout: default
 title: 醧忘台
 ---
+<div id="home">
+  <h1>纸飞机</h1>
+  <div>
+    <p>
+      时间是用来流浪的，
+      身躯是用来相爱的，
+      生命是用来遗忘的，
+      而灵魂则是用来歌唱的。
+    </p>
+  </div>
+  <h1>随笔</h1>
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
